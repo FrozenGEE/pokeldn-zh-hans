@@ -1,5 +1,7 @@
 # pokeldn-zh-hans
 
+> **AI 制作声明**：本语言包的翻译全部由 AI 生成与校对（配合 AI 核对官方译名 [52poke](https://wiki.52poke.com)）。翻译可能存在细微不准确或用语不统一之处，欢迎提交 [Issue](https://github.com/ZsyzLahz/pokeldn-zh-hans/issues) 或 [Pull Request](https://github.com/ZsyzLahz/pokeldn-zh-hans/issues) 修正。
+
 [POKELDN](https://github.com/Decryptu/pokeldn) 的社区简体中文语言包（language pack 插件）。
 
 pokeldn 通过本地无线（LDN）让 ESP32 与 Switch 上的宝可梦游戏通信，用于交换与神秘礼物等。其界面默认只有英文，本插件把它完整汉化——包括所有界面文案（1896 条）、模块内写死的英文（神秘礼物模式/预设等 453 条）以及内置文档（48 篇）。
@@ -117,11 +119,6 @@ python scripts/verify_docs.py
 - 语言包机制与插件规范来自 [pokeldn（Decryptu）](https://github.com/Decryptu/pokeldn)。
 - 官方译名校对参考 [神奇宝贝百科（52poke）](https://wiki.52poke.com)。
 - 本语言包为社区贡献，与 pokeldn 官方无直接关联。
-
-## AI 制作声明
-
-本语言包的翻译全部**由 AI 生成与校对**（配合 AI 核对官方译名 [52poke](https://wiki.52poke.com)）。
-翻译可能存在细微不准确或用语不统一之处，欢迎提交 [Issue](https://github.com/ZsyzLahz/pokeldn-zh-hans/issues) 或 [Pull Request](https://github.com/ZsyzLahz/pokeldn-zh-hans/issues) 修正。
 
 ## License
 
