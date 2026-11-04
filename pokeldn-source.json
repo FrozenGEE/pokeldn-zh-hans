@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "name": "pokeLDN 简体中文语言包",
+  "name": "pokeLDN 中文语言包（简/繁）",
   "homepage": "https://github.com/ZsyzLahz/pokeldn-zh-hans",
   "plugins": [
     {
@@ -13,6 +13,18 @@
       "download": "https://github.com/ZsyzLahz/pokeldn-zh-hans/releases/download/v1.0.0/community-zh-hans-1.0.0.pokeplugin",
       "sha256": "764b32fa632747188e62f9c7ff047bf57c3c25b3cb0adf46bd3dca71e1cb3113",
       "size": 590124,
+      "homepage": "https://github.com/ZsyzLahz/pokeldn-zh-hans"
+    },
+    {
+      "id": "community-zh-hant",
+      "name": "繁體中文",
+      "version": "1.0.0",
+      "api": "1.9",
+      "description": "POKELDN 介面正體中文語言包（社群翻譯，配合 AI 核對 52poke 官方譯名）。",
+      "author": "community",
+      "download": "https://github.com/ZsyzLahz/pokeldn-zh-hans/releases/download/v1.0.0/community-zh-hant-1.0.0.pokeplugin",
+      "sha256": "f7357a0ebf0c9eb4e381ab86fd17169ed927759e356994e2c38b07f893a64fdc",
+      "size": 591915,
       "homepage": "https://github.com/ZsyzLahz/pokeldn-zh-hans"
     }
   ]
