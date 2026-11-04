@@ -96,7 +96,7 @@ python scripts/verify_docs.py
 
 ## AI 制作声明
 
-本语言包的翻译全部**由 AI 生成与校对**（配合人工核对官方译名 [52poke](https://wiki.52poke.com)）。
+本语言包的翻译全部**由 AI 生成与校对**（配合 AI 核对官方译名 [52poke](https://wiki.52poke.com)）。
 翻译可能存在细微不准确或用语不统一之处，欢迎提交 [Issue](https://github.com/ZsyzLahz/pokeldn-zh-hans/issues) 或 [Pull Request](https://github.com/ZsyzLahz/pokeldn-zh-hans/issues) 修正。
 
 ## License
