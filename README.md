@@ -94,6 +94,11 @@ python scripts/verify_docs.py
 - 官方译名校对参考 [神奇宝贝百科（52poke）](https://wiki.52poke.com)。
 - 本语言包为社区贡献，与 pokeldn 官方无直接关联。
 
+## AI 制作声明
+
+本语言包的翻译全部**由 AI 生成与校对**（配合人工核对官方译名 [52poke](https://wiki.52poke.com)）。
+翻译可能存在细微不准确或用语不统一之处，欢迎提交 [Issue](https://github.com/ZsyzLahz/pokeldn-zh-hans/issues) 或 [Pull Request](https://github.com/ZsyzLahz/pokeldn-zh-hans/issues) 修正。
+
 ## License
 
 社区语言包，文本内容按 pokeldn 生态的宽松许可分发（具体见上游仓库条款）。
