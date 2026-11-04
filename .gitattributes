@@ -1,0 +1,9 @@
+# 本仓库文件统一 LF，避免跨平台 CRLF 转换导致内容漂移
+* text=auto eol=lf
+
+*.toml text eol=lf
+*.md   text eol=lf
+*.json text eol=lf
+*.py   text eol=lf
+*.png  binary
+*.zip  binary

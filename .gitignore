@@ -1,0 +1,15 @@
+# 构建产物与临时文件
+__pycache__/
+*.pyc
+out/
+*.log
+run.err.txt
+run.out.txt
+
+# 本机路径相关（脚本里的绝对路径是维护者本机的，不进仓库）
+*.bak
+.pytest_cache/
+
+# 语言包发布用，插件本体在 plugin/ 已保留源码
+#（zip 保留在仓库供直接下载，如需忽略可放开下行）
+# *.zip
