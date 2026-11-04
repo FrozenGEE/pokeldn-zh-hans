@@ -15,7 +15,33 @@ POKELDN lets an ESP32 use local wireless (LDN) to talk to Pokémon games on the 
 
 ## Installation
 
-pokeldn loads language packs through its "community plugin" mechanism — no modification to the app itself, applied after a restart.
+pokeldn loads language packs through its "community plugin" mechanism — no modification to the app itself, applied after a restart. Three ways:
+
+### Way 1: In-app plugin source (recommended)
+
+Install directly from inside pokeldn — no manual copying:
+
+1. Open pokeldn → **Plugins** (bottom of the side menu).
+2. Under **Sources**, type:
+   ```
+   ZsyzLahz/pokeldn-zh-hans
+   ```
+   and press Enter (the source is read from `pokeldn-source.json` at this repo's root).
+3. Back in **Browse**, find **简体中文** (community-zh-hans 1.0.0), press **Install**, acknowledge the risk screen.
+4. Open **Settings → App language** and select **简体中文** (Simplified Chinese).
+5. Restart pokeldn as prompted.
+
+The UI, mystery gifts and docs will then all be in Chinese.
+
+> The `.pokeplugin` package is SHA-256-verified: a download whose hash differs from the listing is refused, so it is safe to install.
+
+### Way 2: Drop the `.pokeplugin`
+
+1. Download `community-zh-hans-1.0.0.pokeplugin` from the [Releases](https://github.com/ZsyzLahz/pokeldn-zh-hans/releases) page.
+2. Open pokeldn → **Plugins**, drag the file onto **Installed**, or press **Add a plugin** and pick it; acknowledge the risk screen.
+3. Enable the language pack as in Way 1, steps 4–5.
+
+### Way 3: Manual copy (offline)
 
 1. Quit pokeldn (tray icon → Quit).
 2. Copy this repository's `plugin/` directory into the language-pack folder:
@@ -23,8 +49,6 @@ pokeldn loads language packs through its "community plugin" mechanism — no mod
    - Other platforms: `~/.config/pokeldn/plugins/community-zh-hans/` (if your DATA dir differs, locate it per the official docs)
 3. Open pokeldn → **Settings → App language** and select **简体中文** (Simplified Chinese).
 4. Restart pokeldn as prompted.
-
-The UI, mystery gifts and docs will then all be in Chinese.
 
 > Alternatively, download `community-zh-hans.zip` from the [Releases](https://github.com/ZsyzLahz/pokeldn-zh-hans/releases) page, unzip it and drop it into the same plugin folder.
 
@@ -41,6 +65,8 @@ pokeldn-zh-hans/
 │   ├── build.py            # merges English strings.en.toml + shards → strings.toml
 │   ├── build_messages.py   # merges msg_*.json → messages.toml
 │   └── verify_docs.py      # validates docs heading levels/links/fences/EN residue
+├── pokeldn-source.json      # plugin-source manifest (read in-app under Sources for one-click install)
+├── community-zh-hans-1.0.0.pokeplugin  # drag-and-drop install package
 ├── community-zh-hans.zip  # ready-made archive, unzip-and-install
 └── README.md
 ```

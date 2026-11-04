@@ -13,7 +13,33 @@ pokeldn 通过本地无线（LDN）让 ESP32 与 Switch 上的宝可梦游戏通
 
 ## 安装
 
-pokeldn 的语言包通过「社区插件」机制加载，无需修改应用本体，退出后用重启生效。
+pokeldn 的语言包通过「社区插件」机制加载，无需修改应用本体，退出后用重启生效。有三种方式：
+
+### 方式一：通过软件内置的插件源安装（推荐）
+
+在软件内即可一键安装，无需手动复制文件：
+
+1. 打开 pokeldn → 侧边菜单底部 **Plugins**。
+2. 在 **Sources** 下输入：
+   ```
+   ZsyzLahz/pokeldn-zh-hans
+   ```
+   并按回车（Sources 会自动读取该仓库根目录的 `pokeldn-source.json`）。
+3. 回到 **Browse** 列表，找到 **简体中文**（community-zh-hans 1.0.0），点 **Install**，确认风险提示。
+4. 打开 **Settings → App language**，选择 **简体中文**。
+5. 按提示重启 pokeldn。
+
+之后界面、神秘礼物、文档全部为中文。
+
+> `.pokeplugin` 包会经 SHA-256 强校验：下载哈希与列出值不符即拒绝安装，可放心使用。
+
+### 方式二：拖入 `.pokeplugin` 文件
+
+1. 从 [Release 页面](https://github.com/ZsyzLahz/pokeldn-zh-hans/releases) 下载 `community-zh-hans-1.0.0.pokeplugin`。
+2. 打开 pokeldn → **Plugins**，把该文件拖到 **Installed** 区，或点 **Add a plugin** 选择它，确认风险提示。
+3. 同方式一共 4-5 步启用语言包。
+
+### 方式三：手动复制目录（离线）
 
 1. 关闭 pokeldn（托盘图标 → Quit）。
 2. 把本仓库 `plugin/` 目录整体复制到语言包目录：
@@ -21,10 +47,6 @@ pokeldn 的语言包通过「社区插件」机制加载，无需修改应用本
    - 其它平台：`~/.config/pokeldn/plugins/community-zh-hans/`（若 DATA 目录不同，按官方文档定位）
 3. 打开 pokeldn → **Settings → App language**，选择 **简体中文**。
 4. 按提示重启 pokeldn。
-
-之后界面、神秘礼物、文档全部为中文。
-
-> 也可以直接下载发布页的 `community-zh-hans.zip`，解压后同样放入上面的插件目录。
 
 ## 目录结构
 
@@ -39,7 +61,9 @@ pokeldn-zh-hans/
 │   ├── build.py            # 由英文 strings.en.toml + 分片合并生成 strings.toml
 │   ├── build_messages.py   # 合并 msg_*.json 生成 messages.toml
 │   └── verify_docs.py      # 校验 docs 标题层级/链接/围栏/英文残留
-├── community-zh-hans.zip  # 现成打包，解压即装
+├── pokeldn-source.json   # 插件源清单（软件内 Sources 自动读取，供一键安装）
+├── community-zh-hans-1.0.0.pokeplugin  # 可直接拖入软件安装的插件包
+├── community-zh-hans.zip  # 现成打包，解压即装（手动方式）
 └── README.md
 ```
 
