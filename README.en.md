@@ -1,6 +1,6 @@
 # pokeldn-zh-hans
 
-An official **Simplified Chinese (zh-Hans) language pack** plugin for [POKELDN](https://github.com/Decryptu/pokeldn).
+A **community Simplified Chinese (zh-Hans) language pack** plugin for [POKELDN](https://github.com/Decryptu/pokeldn).
 
 POKELDN lets an ESP32 use local wireless (LDN) to talk to Pokémon games on the Switch for trading and mystery gifts. Its UI ships in English only; this plugin localizes everything — all UI strings (1896), hardcoded in-app English (mystery-gift modes/presets etc., 453) and the built-in documentation (48 pages).
 

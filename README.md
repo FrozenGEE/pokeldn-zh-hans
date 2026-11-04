@@ -1,6 +1,6 @@
 # pokeldn-zh-hans
 
-[POKELDN](https://github.com/Decryptu/pokeldn) 的官方简体中文语言包（language pack 插件）。
+[POKELDN](https://github.com/Decryptu/pokeldn) 的社区简体中文语言包（language pack 插件）。
 
 pokeldn 通过本地无线（LDN）让 ESP32 与 Switch 上的宝可梦游戏通信，用于交换与神秘礼物等。其界面默认只有英文，本插件把它完整汉化——包括所有界面文案（1896 条）、模块内写死的英文（神秘礼物模式/预设等 453 条）以及内置文档（48 篇）。
 
