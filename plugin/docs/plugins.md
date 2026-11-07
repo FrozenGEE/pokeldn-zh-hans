@@ -142,6 +142,26 @@ while not finished():
 popup.cancel(asked)                     # closes it; no callback fires
 ```
 
+### 运行启动器（1.13）
+
+工具的脚本可以先准备好自己的文件，然后在同一次运行中运行内置启动器，无线电和停止都由
+启动器管理。给它的解析器加上 `--keys`，应用就会传入设置中的 `prod.keys`。
+
+```python
+from pokeldn.plugins import run_launcher
+
+status = run_launcher("bin/frlg_mg_host.py", ["--live", "--keys", args.keys, "--save-backup", path])
+```
+
+`run_launcher` 返回启动器的退出状态；130 表示停止。脚本会在它之后继续运行，因此一个工具
+可以依次运行多次会话。`bin/frlg_mg_host.py` 的稳定选项：
+
+| 选项 | 会话 |
+|---|---|
+| `--save-backup FILE`、`--save-resume-dir DIR` | 把主机的存档写入 `FILE` |
+| `--save-restore-emerald FILE` | 在主机最新存档旁放入一份绿宝石存档，供同一次启动中随后的 ROM 传输使用 |
+| `--rom-transfer ROM`、`--rom-base ROM` 或 `none`、`--block-repeat N`、`--inter-block-gap-frames N` | 把 ROM 传进正在运行的游戏（[The ROM transfer](rse_switch_build.md#the-rom-transfer)） |
+
 ### 插件可以导入什么
 
 发布的应用带有 Python 3.13，且没有 `pip`：
@@ -370,6 +390,7 @@ API 采用 `major.level` 形式；插件的 `api` 是它需要的最低版本。
 | 1.10 | `add_offer_edit` |
 | 1.11 | 火红/叶绿 RNG：`lcg`、`rng_countdown.mon_from`、`scan`、`buffer_script.read_rng_trace` |
 | 1.12 | `Tool` 的 `activity` 和 `variant`（[工具行](#a-tools-row-112)） |
+| 1.13 | `run_launcher`、`pokeldn.switch.cartridge.read`，以及 `bin/frlg_mg_host.py` 的 ROM 选项（[运行启动器](#running-a-launcher-113)） |
 
 ## API 版本 1
 
@@ -381,11 +402,12 @@ API 采用 `major.level` 形式；插件的 `api` 是它需要的最低版本。
 | `api.add_battle_server(game, name, factory, label="")` | 一个团体战战斗服务器（1.6） |
 | `api.add_offer_edit(game, edit, label="")` | 对内置启动器的每次提供进行编辑，在 PKHeX 检查之前（1.10，[提供的宝可梦编辑](#offer-edits-110)） |
 | `api.folder` | 插件的文件夹；对于软件包为 None |
-| `api.version`、`api.level` | 应用的 API，`1` 和 `12` |
+| `api.version`、`api.level` | 应用的 API，`1` 和 `13` |
 | `api.data` | 保留的数据文件夹（1.1） |
 | `pokeldn.plugins.data_folder(plugin_id)` | 在脚本中获取同样的文件夹（1.1） |
 | `api.library`、`pokeldn.plugins.library_folder(plugin_id)` | 库文件夹（1.7，[库](#a-library-17)） |
 | `Tool`、`Field`、`Game` | 来自 `pokeldn.plugins` 的目录类型 |
+| `pokeldn.plugins.run_launcher(script, argv)` | 在本次运行中运行内置启动器；返回其退出状态（1.13） |
 | `pokeldn.ldn.show_done()` | 打印交换完成的行 |
 | `pokeldn.popup.acknowledge(title, text="", *, id, label="OK", on_ack, tone)` | 单按钮弹出窗口；返回 id（1.2，[弹出窗口](gui.md#pop-ups)） |
 | `pokeldn.popup.confirm(title, text, agree, disagree, *, id, on_agree, on_disagree, on_dismiss, tone)` | 两个按钮；按 Esc 或点击外部会关闭；返回 id（1.2） |
@@ -398,7 +420,7 @@ API 采用 `major.level` 形式；插件的 `api` 是它需要的最低版本。
 
 这张表和下一张表就是受支持的接口面；其他任何导入都可能在任何版本中变化。
 
-## 程序接口（1.3，1.4 加入银行，1.5 加入语言包，1.11 加入 RNG）
+## 程序接口（1.3，1.4 加入银行，1.5 加入语言包，1.11 加入 RNG，1.13 加入卡带）
 
 插件，或者在 pokeldn 源码检出上运行的独立程序，都可以使用这些；`tests/test_plugin_surface.py` 会逐一解析。
 
@@ -436,6 +458,7 @@ API 采用 `major.level` 形式；插件的 `api` 是它需要的最低版本。
 | `pokeldn.frlg.rom.lcg.step(value)`、`.advance(value, n)`、`.distance(start, target)`、`.draws(value, count)` | 火红/叶绿的 `gRngValue` 生成器：下一个状态、向前 n 步、两个状态之间的步数、接下来的 `count` 个 `Random()` 结果及剩余状态（1.11，[RNG](frlg_rng.md)） |
 | `pokeldn.frlg.rom.lcg.recover_wild_state(personality, ivs, max_gap=)` | 能生成某只宝可梦的状态，个体值按存储顺序（1.11） |
 | `pokeldn.frlg.rom.rng_countdown.mon_from(state, tid, sid)`、`.scan(state, tid, sid, frames=, want=)` | 某个状态构建的脚本化 `CreateMon`：`personality`、`ivs`、`nature`、`shiny`；`frames` 内的闪光按键（1.11） |
+| `pokeldn.switch.cartridge.read(path, keys=)` | `.gba` 或火红/叶绿游戏包中的 GBA 镜像；`ValueError` 会指出问题所在（1.13） |
 | `pokeldn.frlg.rom.buffer_script.read_rng_trace(dump)` | `--buffer-script rng-trace` 会话的 `--dump-file` 中的样本（1.11） |
 
 要停止一次启动器运行，向它的 PID 发送 SIGINT，15 秒后再发送 SIGTERM；绝不要用 `pkill -f`。

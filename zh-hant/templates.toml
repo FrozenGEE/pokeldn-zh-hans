@@ -1,0 +1,62 @@
+# 繁體中文語言包：帶變數文案的訊息模板。
+# 匹配鍵為英文原文（已格式化後的整串），欄位名與譯文保持一致。
+# term* 欄位會先經 terms() 查詢遊戲專名，message* 欄位會遞迴翻譯。
+
+# --- 禮物摘要（火紅/葉綠與劍/盾共用） ---
+"Gives {term1}, level {message1}" = "贈送 {term1}，等級 {message1}"
+"Gives {term1}, {message1}" = "贈送 {term1}，{message1}"
+"Gives a {term1} egg" = "贈送一顆{term1}的蛋"
+"Gives {term1} x{message1}" = "贈送 {term1}×{message1}"
+"Gives {term1}" = "贈送 {term1}"
+"Starts a battle with a wild {term1}, level {message1}" = "與野生的{term1}開始對戰，等級 {message1}"
+"Says “{message1}”" = "顯示「{message1}」"
+"Holding {term1}" = "攜帶 {term1}"
+"Puts the {term1} in the wardrobe" = "將{term1}放入衣櫃"
+"Adds {message1} Battle Points" = "增加 {message1} 點對戰點數"
+"Adds {message1} to the player's money, up to {message2}" = "為玩家的零用錢增加 {message1}，上限 {message2}"
+"Card id {message1}: a console takes the same id again" = "卡片 ID {message1}：主機可以再次接受相同 ID"
+
+# --- 劍/盾：寶可夢摘要的等級、性格與標記 ---
+"level {message1}, {term1}, shiny, can Gigantamax" = "等級 {message1}，{term1}性格，異色，可超極巨化"
+"level {message1}, {term1}, shiny" = "等級 {message1}，{term1}性格，異色"
+"level {message1}, {term1}, can Gigantamax" = "等級 {message1}，{term1}性格，可超極巨化"
+"level {message1}, {term1}" = "等級 {message1}，{term1}性格"
+"level {message1}, shiny, can Gigantamax" = "等級 {message1}，異色，可超極巨化"
+"level {message1}, shiny" = "等級 {message1}，異色"
+"level {message1}, can Gigantamax" = "等級 {message1}，可超極巨化"
+"level {message1}" = "等級 {message1}"
+"a level the game rolls, {term1}, shiny, can Gigantamax" = "等級由遊戲隨機決定，{term1}性格，異色，可超極巨化"
+"a level the game rolls, {term1}, shiny" = "等級由遊戲隨機決定，{term1}性格，異色"
+"a level the game rolls, {term1}, can Gigantamax" = "等級由遊戲隨機決定，{term1}性格，可超極巨化"
+"a level the game rolls, {term1}" = "等級由遊戲隨機決定，{term1}性格"
+
+# --- 劍/盾：校驗錯誤 ---
+"Sword and Shield have no item {message1}." = "劍/盾沒有編號 {message1} 的道具。"
+"Unknown gift kind {message1}." = "未知的禮物類型 {message1}。"
+"Unknown outfit {message1}." = "未知的服裝 {message1}。"
+"Names: {message1}" = "名稱錯誤：{message1}"
+
+# --- 火紅/葉綠：禮物何時執行與卡片位置 ---
+"Runs when the player talks to {term1}, {message1}." = "玩家與{term1}交談時執行，{message1}。"
+"Runs when the player talks to {term1} in {message1}. The card is not shown while that person holds the gift." = "玩家在{message1}與{term1}交談時執行。在那個人持有禮物期間不會顯示卡片。"
+"Every time the player talks to {term1}, until another gift is received" = "玩家每次與{term1}交談時都會執行，直到收到另一份禮物"
+"News “{message1}”" = "新聞「{message1}」"
+"Built for {message1}" = "為{message1}建構"
+"Step {message1}: {message2}" = "第{message1}步：{message2}"
+"Card {message1} line {message2}: {message3}" = "卡片{message1}第{message2}行：{message3}"
+"Card {message1}: {message2}" = "卡片{message1}：{message2}"
+"The gift: {message1}" = "禮物：{message1}"
+"Unknown step {message1}." = "未知的步驟 {message1}。"
+
+# --- 火紅/葉綠：遊戲增益的說明行 ---
+"{term1} run up to x{message1} {message2}" = "{message2}，{term1}的執行速度最高可達 x{message1} 倍"
+"while {message1} is held" = "按住 {message1} 時"
+"The game runs {term1} while {message1} is held, to hit the frame" = "按住 {message1} 時，遊戲會執行{term1}，以命中目標幀"
+"Walk through walls, trees and water while {message1} is held; people still block the way" = "按住 {message1} 時穿過牆壁、樹木和水面；但人物仍會擋路"
+"Counts down to the next shiny {term1}, top right of the screen" = "在螢幕右上角倒數計時到下一隻異色{term1}"
+"{message1}. This can take a few minutes" = "{message1}。這可能需要幾分鐘"
+"{message1} both draw in the top-right corner: untick one." = "{message1}都會繪製在右上角：請取消勾選其中一個。"
+"These boosts take {message1} bytes together; the console has room for {message2}. Untick one." = "這些增益共佔用 {message1} 位元組；主機只有 {message2} 的空間。請取消勾選一項。"
+"After sending the saved boosts, send \"{term1}\" once. After each restart, talk to Mom at home in Pallet Town to turn them back on. Send Mom's gift again if you receive another Wonder Card." = "傳送已儲存的增益後，再傳送一次「{term1}」。每次重啟後，在真新鎮的家中與媽媽交談以重新開啟增益。如果又收到新的神秘卡片，請再次傳送媽媽的禮物。"
+"Keep a copy of these boosts in your save. {message1}" = "在存檔中保留這些增益的副本。{message1}"
+"These boosts are saved in your game. {message1}" = "這些增益會儲存在你的遊戲中。{message1}"

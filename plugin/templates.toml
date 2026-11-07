@@ -1,0 +1,62 @@
+# 简体中文语言包：带变量文案的消息模板。
+# 匹配键为英文原文（已格式化后的整串），字段名与译文保持一致。
+# term* 字段会先经 terms() 查询游戏专名，message* 字段会递归翻译。
+
+# --- 礼物摘要（火红/叶绿与剑/盾共用） ---
+"Gives {term1}, level {message1}" = "赠送 {term1}，等级 {message1}"
+"Gives {term1}, {message1}" = "赠送 {term1}，{message1}"
+"Gives a {term1} egg" = "赠送一颗{term1}的蛋"
+"Gives {term1} x{message1}" = "赠送 {term1}×{message1}"
+"Gives {term1}" = "赠送 {term1}"
+"Starts a battle with a wild {term1}, level {message1}" = "与野生的{term1}开始对战，等级 {message1}"
+"Says “{message1}”" = "显示「{message1}」"
+"Holding {term1}" = "携带 {term1}"
+"Puts the {term1} in the wardrobe" = "将{term1}放入衣柜"
+"Adds {message1} Battle Points" = "增加 {message1} 点对战点数"
+"Adds {message1} to the player's money, up to {message2}" = "为玩家的金钱增加 {message1}，上限 {message2}"
+"Card id {message1}: a console takes the same id again" = "卡片 ID {message1}：主机可以再次接受相同 ID"
+
+# --- 剑/盾：宝可梦摘要的等级、性格与标记 ---
+"level {message1}, {term1}, shiny, can Gigantamax" = "等级 {message1}，{term1}性格，异色，可超极巨化"
+"level {message1}, {term1}, shiny" = "等级 {message1}，{term1}性格，异色"
+"level {message1}, {term1}, can Gigantamax" = "等级 {message1}，{term1}性格，可超极巨化"
+"level {message1}, {term1}" = "等级 {message1}，{term1}性格"
+"level {message1}, shiny, can Gigantamax" = "等级 {message1}，异色，可超极巨化"
+"level {message1}, shiny" = "等级 {message1}，异色"
+"level {message1}, can Gigantamax" = "等级 {message1}，可超极巨化"
+"level {message1}" = "等级 {message1}"
+"a level the game rolls, {term1}, shiny, can Gigantamax" = "等级由游戏随机决定，{term1}性格，异色，可超极巨化"
+"a level the game rolls, {term1}, shiny" = "等级由游戏随机决定，{term1}性格，异色"
+"a level the game rolls, {term1}, can Gigantamax" = "等级由游戏随机决定，{term1}性格，可超极巨化"
+"a level the game rolls, {term1}" = "等级由游戏随机决定，{term1}性格"
+
+# --- 剑/盾：校验错误 ---
+"Sword and Shield have no item {message1}." = "剑/盾没有编号 {message1} 的道具。"
+"Unknown gift kind {message1}." = "未知的礼物类型 {message1}。"
+"Unknown outfit {message1}." = "未知的服装 {message1}。"
+"Names: {message1}" = "名称错误：{message1}"
+
+# --- 火红/叶绿：礼物何时运行与卡片位置 ---
+"Runs when the player talks to {term1}, {message1}." = "玩家与{term1}交谈时运行，{message1}。"
+"Runs when the player talks to {term1} in {message1}. The card is not shown while that person holds the gift." = "玩家在{message1}与{term1}交谈时运行。在那个人持有礼物期间不会显示卡片。"
+"Every time the player talks to {term1}, until another gift is received" = "玩家每次与{term1}交谈时都会运行，直到收到另一份礼物"
+"News “{message1}”" = "新闻「{message1}」"
+"Built for {message1}" = "为{message1}构建"
+"Step {message1}: {message2}" = "第{message1}步：{message2}"
+"Card {message1} line {message2}: {message3}" = "卡片{message1}第{message2}行：{message3}"
+"Card {message1}: {message2}" = "卡片{message1}：{message2}"
+"The gift: {message1}" = "礼物：{message1}"
+"Unknown step {message1}." = "未知的步骤 {message1}。"
+
+# --- 火红/叶绿：游戏增益的说明行 ---
+"{term1} run up to x{message1} {message2}" = "{message2}，{term1}的运行速度最高可达 x{message1} 倍"
+"while {message1} is held" = "按住 {message1} 时"
+"The game runs {term1} while {message1} is held, to hit the frame" = "按住 {message1} 时，游戏会{term1}运行，以命中目标帧"
+"Walk through walls, trees and water while {message1} is held; people still block the way" = "按住 {message1} 时穿过墙壁、树木和水面；但人物仍会挡路"
+"Counts down to the next shiny {term1}, top right of the screen" = "在屏幕右上角倒计时到下一只异色{term1}"
+"{message1}. This can take a few minutes" = "{message1}。这可能需要几分钟"
+"{message1} both draw in the top-right corner: untick one." = "{message1}都会绘制在右上角：请取消勾选其中一个。"
+"These boosts take {message1} bytes together; the console has room for {message2}. Untick one." = "这些增益共占用 {message1} 字节；主机只有 {message2} 的空间。请取消勾选一项。"
+"After sending the saved boosts, send \"{term1}\" once. After each restart, talk to Mom at home in Pallet Town to turn them back on. Send Mom's gift again if you receive another Wonder Card." = "发送已保存的增益后，再发送一次「{term1}」。每次重启后，在真新镇的家中与妈妈交谈以重新开启增益。如果又收到新的神秘卡片，请再次发送妈妈的礼物。"
+"Keep a copy of these boosts in your save. {message1}" = "在存档中保留这些增益的副本。{message1}"
+"These boosts are saved in your game. {message1}" = "这些增益会保存在你的游戏中。{message1}"

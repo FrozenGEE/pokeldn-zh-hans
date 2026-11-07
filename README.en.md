@@ -2,14 +2,15 @@
 
 A **community Simplified Chinese (zh-Hans) language pack** plugin for [POKELDN](https://github.com/Decryptu/pokeldn).
 
-POKELDN lets an ESP32 use local wireless (LDN) to talk to Pokémon games on the Switch for trading and mystery gifts. Its UI ships in English only; this plugin localizes everything — all UI strings (1896), hardcoded in-app English (mystery-gift modes/presets etc., 453) and the built-in documentation (48 pages).
+POKELDN lets an ESP32 use local wireless (LDN) to talk to Pokémon games on the Switch for trading and mystery gifts. Its UI ships in English only; this plugin localizes everything — all UI strings (1898), hardcoded in-app English (mystery-gift modes/presets etc., 587) and the built-in documentation (48 pages).
 
 > ⚠️ **AI-generated translation.** All translations in this pack were produced and proofread by an AI assistant, with official Simplified Chinese names AI-verified against [神奇宝贝百科 / 52poke](https://wiki.52poke.com). Minor inaccuracies or inconsistent wordings may exist. Corrections via [Issue](https://github.com/ZsyzLahz/pokeldn-zh-hans/issues) or [Pull Request](https://github.com/ZsyzLahz/pokeldn-zh-hans/issues) are welcome.
 
 ## Features
 
-- **Full UI localization**: `strings.toml` (1896 entries) covering menus, settings, devices, bank, GTS, sessions and more.
-- **Hardcoded text localized**: `messages.toml` (453 entries) covering the mystery-gift MODES/PRESETS, event-gift items, and other in-game strings (e.g. "Mystery Cards", "Nature Mints", "10 ANIV").
+- **Full UI localization**: `strings.toml` (1898 entries) covering menus, settings, devices, bank, GTS, sessions and more.
+- **Hardcoded text localized**: `messages.toml` (587 entries) covering the mystery-gift MODES/PRESETS, event-gift items, and other in-game strings (e.g. "Mystery Cards", "Nature Mints", "10 ANIV").
+- **Templated text localized**: `templates.toml` (49 entries) covering gift summaries, game-boost descriptions, validation errors and other sentences with dynamic parts.
 - **Docs fully translated**: `docs/` (48 markdown pages) mirroring the official Pokédex docs page-for-page with identical heading hierarchy, links and table structure.
 - **Official names**: Pokémon, moves, abilities, items, berries, natures and marks follow the official Simplified Chinese translations from [52poke](https://wiki.52poke.com).
 
@@ -27,7 +28,7 @@ Install directly from inside pokeldn — no manual copying:
    ZsyzLahz/pokeldn-zh-hans
    ```
    and press Enter (the source is read from `pokeldn-source.json` at this repo's root).
-3. Back in **Browse**, find **简体中文** (community-zh-hans 1.0.0), press **Install**, acknowledge the risk screen.
+3. Back in **Browse**, find **简体中文** (community-zh-hans 1.0.2), press **Install**, acknowledge the risk screen.
 4. Open **Settings → App language** and select **简体中文** (Simplified Chinese).
 5. Restart pokeldn as prompted.
 
@@ -37,7 +38,7 @@ The UI, mystery gifts and docs will then all be in Chinese.
 
 ### Way 2: Drop the `.pokeplugin`
 
-1. Download `community-zh-hans-1.0.0.pokeplugin` from the [Releases](https://github.com/ZsyzLahz/pokeldn-zh-hans/releases) page.
+1. Download `community-zh-hans-1.0.2.pokeplugin` from the [Releases](https://github.com/ZsyzLahz/pokeldn-zh-hans/releases) page.
 2. Open pokeldn → **Plugins**, drag the file onto **Installed**, or press **Add a plugin** and pick it; acknowledge the risk screen.
 3. Enable the language pack as in Way 1, steps 4–5.
 
@@ -58,15 +59,16 @@ The UI, mystery gifts and docs will then all be in Chinese.
 pokeldn-zh-hans/
 ├── plugin/
 │   ├── plugin.toml      # language-pack metadata (id/name/api/locale)
-│   ├── strings.toml     # UI strings, 1896 entries
-│   ├── messages.toml    # hardcoded in-app English, 453 entries
+│   ├── strings.toml     # UI strings, 1898 entries
+│   ├── messages.toml    # hardcoded in-app English, 587 entries
+│   ├── templates.toml   # templated text, 49 entries
 │   └── docs/            # built-in docs, 48 pages (all in Chinese)
 ├── scripts/
 │   ├── build.py            # merges English strings.en.toml + shards → strings.toml
 │   ├── build_messages.py   # merges msg_*.json → messages.toml
 │   └── verify_docs.py      # validates docs heading levels/links/fences/EN residue
 ├── pokeldn-source.json      # plugin-source manifest (read in-app under Sources for one-click install)
-├── community-zh-hans-1.0.0.pokeplugin  # drag-and-drop install package
+├── community-zh-hans-1.0.2.pokeplugin  # drag-and-drop install package
 ├── community-zh-hans.zip  # ready-made archive, unzip-and-install
 └── README.md
 ```
@@ -78,11 +80,12 @@ pokeldn-zh-hans/
 ```toml
 id = "community-zh-hans"
 name = "简体中文"
-version = "1.0.0"
+version = "1.0.2"
 api = "1.9"
 locale = "zh-Hans"
 strings = "strings.toml"
 messages = "messages.toml"
+templates = "templates.toml"
 documents = "docs"
 description = "POKELDN 界面简体中文语言包（社区翻译）。"
 author = "community"
