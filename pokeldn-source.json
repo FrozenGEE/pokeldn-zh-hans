@@ -6,25 +6,25 @@
     {
       "id": "community-zh-hans",
       "name": "简体中文",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "api": "1.9",
       "description": "POKELDN 界面简体中文语言包（社区翻译，配合 AI 核对 52poke 官方译名）。",
       "author": "community",
-      "download": "https://github.com/ZsyzLahz/pokeldn-zh-hans/releases/download/v1.0.4/community-zh-hans-1.0.4.pokeplugin",
-      "sha256": "3e605b592449865315ecdda9af820f884df1a1a943ddfd4abf7db63581549edc",
-      "size": 616075,
+      "download": "https://github.com/ZsyzLahz/pokeldn-zh-hans/releases/download/v1.0.5/community-zh-hans-1.0.5.pokeplugin",
+      "sha256": "6aa7e2764668f25d62f7b6193599ad1df00ba6a97c8c8bc426352a3f01b6ea4d",
+      "size": 669265,
       "homepage": "https://github.com/ZsyzLahz/pokeldn-zh-hans"
     },
     {
       "id": "community-zh-hant",
       "name": "繁體中文",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "api": "1.9",
       "description": "POKELDN 介面正體中文語言包（社群翻譯，配合 AI 核對 52poke 官方譯名）。",
       "author": "community",
-      "download": "https://github.com/ZsyzLahz/pokeldn-zh-hans/releases/download/v1.0.4/community-zh-hant-1.0.4.pokeplugin",
-      "sha256": "dfe18d2b62268878ca08e250d1e04f8a51f7063a6f0c76b694ad8bc74daeb1db",
-      "size": 617984,
+      "download": "https://github.com/ZsyzLahz/pokeldn-zh-hans/releases/download/v1.0.5/community-zh-hant-1.0.5.pokeplugin",
+      "sha256": "af750c40791f957a691244dfeb4ac8d695737678b00bea81b2d80fb81380e0b4",
+      "size": 671331,
       "homepage": "https://github.com/ZsyzLahz/pokeldn-zh-hans"
     }
   ]
