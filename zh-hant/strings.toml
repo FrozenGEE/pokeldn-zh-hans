@@ -265,6 +265,7 @@
 "boards.radio_test_step_listen" = "裝置會在 Switch 的頻道上監聽約 20 秒。"
 "boards.radio_test_step_phone" = "隨後它會廣播一個名為 POKELDN-TEST 的 Wi-Fi 網路，持續 60 秒：請在手機的 Wi-Fi 列表中查詢它，靠近裝置、相距幾步之內。"
 "boards.radio_test_step_report" = "結果會保留在下方日誌中；「複製裝置資訊」會包含這些結果。"
+"boards.reinstall" = "重裝"
 "boards.remove_c3812f" = "移除"
 "boards.save_the_name_4a4b36" = "儲存名稱"
 "boards.sent_on_its_own_from_any_usb_charger_14f369" = "由任意 USB 充電器獨立傳送"
