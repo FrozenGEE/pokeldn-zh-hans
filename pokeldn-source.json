@@ -11,8 +11,8 @@
       "description": "POKELDN 界面简体中文语言包（社区翻译，配合 AI 核对 52poke 官方译名）。",
       "author": "community",
       "download": "https://raw.githubusercontent.com/FrozenGEE/pokeldn-zh-hans/HEAD/community-zh-hans-1.0.7.pokeplugin",
-      "sha256": "1d516051a338ca72877d3f54e9f938e691ff18afaa9fb37558eb190163e6b6ff",
-      "size": 670026,
+      "sha256": "68e35289193ad44b45d176e30d167c10cc9f39285ca9f3562ac111281152f3d0",
+      "size": 670088,
       "homepage": "https://github.com/FrozenGEE/pokeldn-zh-hans"
     },
     {
@@ -23,8 +23,8 @@
       "description": "POKELDN 介面正體中文語言包（社群翻譯，配合 AI 核對 52poke 官方譯名）。",
       "author": "community",
       "download": "https://raw.githubusercontent.com/FrozenGEE/pokeldn-zh-hans/HEAD/community-zh-hant-1.0.7.pokeplugin",
-      "sha256": "78ad76142317b76ae98217a44c5a814697cdd7a0911c6c39038105397880d4c2",
-      "size": 672092,
+      "sha256": "7661bd17cf1314531e9b8ae888f3496854fce9114142bdfea6fe5e449052247a",
+      "size": 672159,
       "homepage": "https://github.com/FrozenGEE/pokeldn-zh-hans"
     }
   ]
