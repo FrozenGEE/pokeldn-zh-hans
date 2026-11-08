@@ -28,7 +28,7 @@ Install directly from inside pokeldn — no manual copying:
    ZsyzLahz/pokeldn-zh-hans
    ```
    and press Enter (the source is read from `pokeldn-source.json` at this repo's root).
-3. Back in **Browse**, find **简体中文** (community-zh-hans 1.0.5), press **Install**, acknowledge the risk screen.
+3. Back in **Browse**, find **简体中文** (community-zh-hans 1.0.6), press **Install**, acknowledge the risk screen.
 4. Open **Settings → App language** and select **简体中文** (Simplified Chinese).
 5. Restart pokeldn as prompted.
 
@@ -38,7 +38,7 @@ The UI, mystery gifts and docs will then all be in Chinese.
 
 ### Way 2: Drop the `.pokeplugin`
 
-1. Download `community-zh-hans-1.0.5.pokeplugin` from the [Releases](https://github.com/ZsyzLahz/pokeldn-zh-hans/releases) page.
+1. Download `community-zh-hans-1.0.6.pokeplugin` from the [Releases](https://github.com/ZsyzLahz/pokeldn-zh-hans/releases) page.
 2. Open pokeldn → **Plugins**, drag the file onto **Installed**, or press **Add a plugin** and pick it; acknowledge the risk screen.
 3. Enable the language pack as in Way 1, steps 4–5.
 
@@ -68,7 +68,7 @@ pokeldn-zh-hans/
 │   ├── build_messages.py   # merges msg_*.json → messages.toml
 │   └── verify_docs.py      # validates docs heading levels/links/fences/EN residue
 ├── pokeldn-source.json      # plugin-source manifest (read in-app under Sources for one-click install)
-├── community-zh-hans-1.0.5.pokeplugin  # drag-and-drop install package
+├── community-zh-hans-1.0.6.pokeplugin  # drag-and-drop install package
 ├── community-zh-hans.zip  # ready-made archive, unzip-and-install
 └── README.md
 ```
@@ -80,7 +80,7 @@ pokeldn-zh-hans/
 ```toml
 id = "community-zh-hans"
 name = "简体中文"
-version = "1.0.5"
+version = "1.0.6"
 api = "1.9"
 locale = "zh-Hans"
 strings = "strings.toml"
