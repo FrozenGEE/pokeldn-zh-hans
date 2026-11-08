@@ -1,6 +1,6 @@
 id = "community-zh-hant"
 name = "繁體中文"
-version = "1.0.7"
+version = "1.0.8"
 api = "1.9"
 locale = "zh-Hant"
 strings = "strings.toml"
